@@ -1,9 +1,15 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/login">Login</router-link>
+
+      <router-link to="/login">Login</router-link> <br><br>
+      <router-link to="/admin">Admin</router-link> |
+      <router-link to="/user">Kasutaja</router-link> <br><br>
+      <router-link to="/inventory">Rahvariided</router-link> |
+      <router-link to="/transaction">Laenutus</router-link> |
+      <router-link to="/juhend">Juhend</router-link> <br><br>
+      <router-link to="/about">Local storage</router-link>
+
     </div>
     <router-view/>
   </div>

@@ -11,7 +11,7 @@
         <span>Valitud roll: {{ selected }} </span>
       </select>
     </div>
-    <button v-on:click="deleteDataToLocalStorage">Kustuta local storage andmed</button>
+    <button v-on:click="deleteDataFromLocalStorage">Kustuta local storage andmed</button>
 
 
   </div>
@@ -30,7 +30,7 @@ export default {
     this.options = JSON.parse(localStorage.getItem('roleOptions'))
   },
   methods: {
-    deleteDataToLocalStorage: function () {
+    deleteDataFromLocalStorage: function () {
       localStorage.removeItem('roleSelected')
       localStorage.removeItem('roleOptions')
     },
