@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import login from "@/views/Login";
 import Admin from "@/views/Admin";
+import RoleSelection from "@/views/RoleSelection";
 
 Vue.use(VueRouter)
 
@@ -26,6 +27,11 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: login
+    },
+    {
+       path: '/role/selection',
+        name: "RoleSelection",
+        component: RoleSelection
     },
     {
         path: '/admin',

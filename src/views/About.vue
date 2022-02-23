@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>Testime kas local storage toimib</h1>
+    <h1>Vali roll</h1>
     <span>Valitud roll: {{selected}}</span>
 
     <div>
@@ -8,9 +8,12 @@
         <option disabled value="">Vali roll</option>
         <option v-for="option in options" :value="option.id">{{ option.roleTypeName }}, {{option.groupGroupName}}</option>
         <br>
-        <span>Valitud roll: {{ selected }} </span>
+        <span>Valitud roll: {{ selected }} </span><br>
       </select>
     </div>
+    <button v-on:click="getInputAndRedirectToOutputPage">Edasi</button><br><br><br>
+
+
     <button v-on:click="deleteDataFromLocalStorage">Kustuta local storage andmed</button>
 
 
@@ -22,9 +25,11 @@ export default {
   data: function () {
     return{
       options: {},
-      selected: ""
+      selected: "",
+      role: ""
     }
   },
+
   beforeMount() {
     this.selected = localStorage.getItem('roleSelected')
     this.options = JSON.parse(localStorage.getItem('roleOptions'))
@@ -33,7 +38,7 @@ export default {
     deleteDataFromLocalStorage: function () {
       localStorage.removeItem('roleSelected')
       localStorage.removeItem('roleOptions')
-    },
+    }
 
   }
 }
