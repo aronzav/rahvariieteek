@@ -49,9 +49,7 @@ export default {
             localStorage.setItem('roleOptions', JSON.stringify(this.options))
             localStorage.setItem('firstName', response.data.firstname)
             localStorage.setItem('lastName', response.data.lastname)
-            this.$router.push({
-              name: 'RoleSelection'
-            })
+            this.$router.push({name: 'RoleSelection'})
           }
       ).catch(error => {
 

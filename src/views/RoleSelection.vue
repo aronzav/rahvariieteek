@@ -1,5 +1,6 @@
 <template>
   <div class="roleSelection">
+
     <h3>Tere, {{ firstName }} {{ lastName }}! </h3>
     <span id="roleId">Valitud roll: {{ selected }}</span><br><br><br>
 
@@ -14,17 +15,24 @@
     </div>
     <button v-on:click="selectAndProceedToAdminPage">Edasi</button>
     <br><br><br>
+    <Close/>
 
 
-    <button v-on:click="deleteDataFromLocalStorage">Tühista sessioon</button>
+<!--    <button v-on:click="deleteDataFromLocalStorage">Tühista sessioon</button>-->
 
 
   </div>
 </template>
 
 <script>
+
+import Close from "@/components/Close";
+
 export default {
   name: "RoleSelection",
+  components: {
+    Close
+  },
   data: function () {
     return {
       options: {},
@@ -40,21 +48,24 @@ export default {
     this.options = JSON.parse(localStorage.getItem('roleOptions'))
     this.firstName = localStorage.getItem('firstName')
     this.lastName = localStorage.getItem('lastName')
+
   },
   methods: {
     selectAndProceedToAdminPage: function () {
-      this.$router.push({name: 'Admin', query: {roleParam: this.role}})
+      this.$router.push({name: 'Admin', query: {roleParam: this.role.id}})
     },
     mounted() {
-    },
-
-
-    deleteDataFromLocalStorage: function () {
-      localStorage.removeItem('roleSelected')
-      localStorage.removeItem('roleOptions')
-      localStorage.removeItem('firstName')
-      localStorage.removeItem('lastName')
     }
+    // ,
+    //
+    //
+    // deleteDataFromLocalStorage: function () {
+    //   localStorage.removeItem('roleSelected')
+    //   localStorage.removeItem('roleOptions')
+    //   localStorage.removeItem('firstName')
+    //   localStorage.removeItem('lastName')
+    //   this.$router.push({name: 'Login'})
+    // }
   }
 
 

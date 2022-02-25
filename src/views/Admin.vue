@@ -1,21 +1,38 @@
 <template>
-  <div id="nav">
+  <div id="admin">
+    <Close/>
+    <img alt="Logo" src="../assets/logorhv.png">
+
+    <HelloAdmin/>
 
 
-    <router-link to="/admin">Admin</router-link> |
-    <router-link to="/user">Kasutaja</router-link> <br><br>
-    <router-link to="/inventory">Rahvariided</router-link> |
-    <router-link to="/transaction">Laenutus</router-link> |
-    <router-link to="/juhend">Juhend</router-link> <br><br>
 
-    <router-link to="/role/selection">Vali roll</router-link>
 
   </div>
 </template>
 
 <script>
+import HelloAdmin from "@/components/HelloAdmin";
+import Close from "@/components/Close";
+import AdUser from "@/components/AdUser";
+
 export default {
-  name: "Vastutav"
+  name: 'Admin',
+  components: {
+    HelloAdmin,
+    AdUser,
+    Close
+  },
+  data: function () {
+    return {
+      options: {},
+      selected: "",
+      role: "",
+      firstName: "",
+      lastName: ""
+    }
+
+  }
 }
 </script>
 

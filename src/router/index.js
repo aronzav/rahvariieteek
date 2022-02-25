@@ -4,12 +4,13 @@ import Home from '../views/Home.vue'
 import login from "@/views/Login";
 import Admin from "@/views/Admin";
 import RoleSelection from "@/views/RoleSelection";
+import Dancer from "@/views/Dancer";
 
 Vue.use(VueRouter)
 
 const routes = [
     {
-        path: '/login',
+        path: '/',
         name: 'Login',
         component: login
     },
@@ -33,15 +34,15 @@ const routes = [
             return import(/* webpackChunkName: "about" */ '../views/About.vue')
         }
     },
-    // {
-    //     path: '/',
-    //     name: 'Home',
-    //     component: Home
-    // },
     {
-        path: '/user',
-        name: 'User',
+        path: '/home',
+        name: 'Home',
         component: Home
+    },
+    {
+        path: '/dancer',
+        name: 'Dancer',
+        component: Dancer
     },
     {
         path: '/inventory',

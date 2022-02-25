@@ -1,10 +1,9 @@
 <template>
   <div id="app">
-    <div id="nav">
-    <router-link to="/login">Login </router-link> <br><br>
+    <router-link to="/login"> </router-link> <br><br>
 
     <router-view/>
-  </div></div>
+  </div>
 </template>
 
 <style>
@@ -29,7 +28,8 @@
   color: #42b983;
 }
 </style>
-<script>export default {
+<script>
+export default {
   components: {}
 }
 </script>
