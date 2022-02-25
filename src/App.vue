@@ -1,10 +1,9 @@
 <template>
   <div id="app">
-    <router-link to="/login"></router-link> <br><br>
+
+    <router-link to="/login"> </router-link> <br><br>
 
     <router-view/>
-
-
   </div>
 </template>
 

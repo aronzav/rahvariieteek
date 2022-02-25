@@ -9,9 +9,19 @@ Vue.use(VueRouter)
 
 const routes = [
     {
-        path: '/',
-        name: 'Home',
-        component: Home
+        path: '/login',
+        name: 'Login',
+        component: login
+    },
+    {
+        path: '/role/selection',
+        name: "RoleSelection",
+        component: RoleSelection
+    },
+    {
+        path: '/admin',
+        name: 'Admin',
+        component: Admin
     },
     {
         path: '/about',
@@ -23,21 +33,11 @@ const routes = [
             return import(/* webpackChunkName: "about" */ '../views/About.vue')
         }
     },
-    {
-        path: '/login',
-        name: 'Login',
-        component: login
-    },
-    {
-       path: '/role/selection',
-        name: "RoleSelection",
-        component: RoleSelection
-    },
-    {
-        path: '/admin',
-        name: 'Admin',
-        component: Admin
-    },
+    // {
+    //     path: '/',
+    //     name: 'Home',
+    //     component: Home
+    // },
     {
         path: '/user',
         name: 'User',

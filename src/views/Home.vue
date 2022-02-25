@@ -3,6 +3,8 @@
     <img alt="Logo" src="../assets/logorhv.png">
     <HelloWorld msg="Just need õiged riided sulle tantsimiseks"/>
   </div>
+
+
 </template>
 
 <script>

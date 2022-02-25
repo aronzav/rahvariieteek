@@ -1,5 +1,7 @@
 <template>
-
+  <div class="proov">
+  <router-link to="/about" >About</router-link>
+  </div>
 </template>
 
 <script>
