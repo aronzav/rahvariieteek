@@ -4,7 +4,7 @@
     <HelloWorld msg="Just need õiged riided sulle tantsimiseks"/>
   </div>
 
-
+<h1>Tere, Aronza</h1>
 </template>
 
 <script>
