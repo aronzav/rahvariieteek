@@ -1,16 +1,20 @@
 <template>
-  <div class="adUser">
-    <h3>Lisa kasutaja:</h3>
-    <div><input placeholder="Kasutajanimi" v-model="userName"></div><br>
-    <div><input placeholder="Salasõna" v-model="password"></div><br>
-    <div><button v-on:click="addNewUser">Salvesta </button></div><br>
+  <div class="addUserDetails">
+    <h3>Kasutaja lisamine:</h3>
+    <div><input placeholder="Eesnimi" v-model="firstname"></div><br>
+    <div><input placeholder="Perekonnanimi" v-model="lastname"></div><br>
+    <div><input placeholder="Meiliaadress" v-model="email"></div><br>
+    <div><input placeholder="Telefoni number" v-model="telephone"></div><br>
+    <div><input placeholder="Sünnikuupäev" v-model="birthday"></div><br>
+    <div><button v-on:click="addUserDetails">Salvesta </button></div><br>
 
   </div>
 </template>
 
 <script>
 export default {
-  name: "AdUser",
+  name: "AddUserDetails"
+  ,
   data: function () {
     return {
       userName: '',
@@ -35,8 +39,8 @@ export default {
         console.log(error)
       })
     }
-  }
-}
+  }}
+
 </script>
 
 <style scoped>

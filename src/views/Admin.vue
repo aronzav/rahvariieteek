@@ -4,8 +4,7 @@
     <img alt="Logo" src="../assets/logorhv.png">
 
     <HelloAdmin/>
-
-
+    <AdUser/>
 
 
   </div>

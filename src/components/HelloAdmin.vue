@@ -8,22 +8,16 @@
       <router-link to="/transaction">Laenutus</router-link> |
       <router-link to="/juhend">Juhend</router-link> <br><br>
 
-      <h1>Siin peaks olema eesnimi ja perek.nimi ?? {{ firstName }} {{lastName}}</h1>
+      <h3>{{ firstName}} {{lastName}}</h3>
 
-      <p>
-        Admin lehekülg
+        Admin:<br>
+        <ul><li>1.  Saab lisada kasutajat</li>
+      <li>2. Saab vaadata kasutaja andmeid</li>
+      <li>3. Saab muuta kasutajat</li>
+      <li>4. Saab lisada gruppi</li>
+      <li> 5. Saab muuta gruppe</li>
+      <li>6. Saab vaadata gruppe</li></ul>
 
-        1. Saab vaadata kasutaja andmeid
-        2. Saab lisada kasutajat
-        3. Saab muuta kasutajat
-        4. Saab lisada gruppi
-        5. Saab muuta gruppe
-        6. Saab vaadata gruppe
-
-
-
-
-      </p>
     </div>
   </div>
 </template>
@@ -35,7 +29,16 @@ export default {
   props: {
     firstName: '',
     lastName: '',
-    roleParam: ''
+    roleSelected: '',
+    roleName:''
+  },
+
+  beforeMount() {
+    this.roleSelected = localStorage.getItem('roleSelected')
+    this.roleName = JSON.parse(localStorage.getItem('roleOptions.roleTypeName'))
+    this.firstName = localStorage.getItem('firstName')
+    this.lastName = localStorage.getItem('lastName')
+
   }
 }
 

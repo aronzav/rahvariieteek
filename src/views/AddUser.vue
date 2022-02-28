@@ -1,9 +1,9 @@
 <template>
   <div class="addUser">
   <h3>Lisa kasutaja:</h3>
-  <div><input placeholder="Kasutajanimi"></div><br>
-  <div><input placeholder="Salasõna"></div><br>
-    <div><button v-on:click="addNewUser">Salvesta</div><br>
+  <div><input placeholder="Kasutajanimi" v-model="userName"></div><br>
+  <div><input placeholder="Salasõna" v-model="password"></div><br>
+    <div><button v-on:click="addNewUser">Salvesta</button></div><br>
 
   </div>
 </template>
